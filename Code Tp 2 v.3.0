@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+ int a,b,ma,mb,c,d;
+ c=1;
+ d=1;
+ printf("Partons du principe qu'il y ai une brique de chaque deja 
+pose,\n ecrivez la valeur de votre premiere briques : \n");
+ scanf("%u",&a);
+ ma=a;
+ printf("ecrivez la valeur de votre seconde briques : \n");
+ scanf("%u",&b);
+ mb=b;
+ while(ma!=mb)
+ {
+ if (ma<mb)
+ {
+ ma=ma+15;
+ c=c+1;
+ }
+ else
+ {
+ mb=mb+25;
+ d=d+1;
+ }
+ }
+ printf("La taille du mur pour que les deux murs soit egaux est 
+%u",mb);
+ printf("\n il faut que le nombre de briques une soit : %u",c);
+ printf("\n il faut que le nombre de briques deux soit : %u",d);
+}
