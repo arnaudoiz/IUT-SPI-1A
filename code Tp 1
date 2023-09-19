@@ -1,0 +1,65 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <string.h>
+
+int main()
+{
+    float a;
+    float b;
+    float c;
+    int div;
+
+    printf("Bienvenue dans votre calculateur. Pour sélectionner l'opération souhaitée, saisissez :\n1 pour une addition,\n2 pour une soustraction,\n3 pour une multiplication,\nou 4 pour une division\n");
+    scanf("%d", &div);
+
+    if (div == 1)
+    {
+        printf("Saisissez votre premier terme : ");
+        scanf("%f", &a);
+        printf("Saisissez votre second terme : ");
+        scanf("%f", &b);
+        c = a + b;
+        printf("La somme de vos termes vaut : %.2f\n", c);
+    }
+    else if (div == 2)
+    {
+        printf("Saisissez votre premier terme : ");
+        scanf("%f", &a);
+        printf("Saisissez votre second terme : ");
+        scanf("%f", &b);
+        c = a - b;
+        printf("La différence de vos termes vaut : %.2f\n", c);
+    }
+    else if (div == 3)
+    {
+        printf("Saisissez votre premier facteur : ");
+        scanf("%f", &a);
+        printf("Saisissez votre second facteur : ");
+        scanf("%f", &b);
+        c = a * b;
+        printf("Le produit de vos termes vaut : %.2f\n", c);
+    }
+    else if (div == 4)
+    {
+        printf("Saisissez votre numérateur : ");
+        scanf("%f", &a);
+        printf("Saisissez votre dénominateur : ");
+        scanf("%f", &b);
+        if (b != 0)
+        {
+            c = a / b;
+            printf("Le quotient de vos termes vaut : %.2f\n", c);
+        }
+        else
+        {
+            printf("Erreur : division par zéro.\n");
+        }
+    }
+    else
+    {
+        printf("Choix invalide.\n");
+    }
+
+    return 0;
+}
