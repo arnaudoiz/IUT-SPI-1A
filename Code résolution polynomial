@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int a, b, c, d;
+    float x1, x2, x0;
+
+    printf("Définissez a, b et c tels que ax^2 + bx + c = 0 :\n");
+    scanf("%d %d %d", &a, &b, &c);
+
+    d = b * b - 4 * a * c;
+
+    if (a == 0)
+    {
+        if (b == 0)
+        {
+            printf("Il n'y a pas de polynôme.\n");
+        }
+        else
+        {
+            x1 = -c / (float)b;
+            printf("x1 = %f\n", x1);
+        }
+    }
+    else if (d > 0)
+    {
+        x1 = (-b - sqrt(d)) / (2.0 * a);
+        x2 = (-b + sqrt(d)) / (2.0 * a);
+        printf("x1 = %f\n", x1);
+        printf("x2 = %f\n", x2);
+    }
+    else if (d == 0)
+    {
+        x0 = -b / (2.0 * a);
+        printf("x0 = %f\n", x0);
+    }
+    else
+    {
+        printf("Il n'y a pas de solutions réelles.\n");
+    }
+
+    return 0;
+}
