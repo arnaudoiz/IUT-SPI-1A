@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+ int ma,mb;
+ ma=15;
+ mb=25;
+ while(ma!=mb)
+ {
+ if (ma<mb)
+ {
+ ma=ma+15;
+ }
+ else
+ {
+ mb=mb+25;
+ }
+ }
+ printf("La taille du mur pour que les deux murs soit égaux est
+%u",mb);
+}
